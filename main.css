@@ -22673,13 +22673,13 @@ legend {
 .app-logo {
     height: 23px;
     width: 97px;
-    background: url(assets/images/logo-inverse.png)
+    background: url(assets/images/logo.jpg)
 }
 
 .app-logo-inverse {
-    height: 23px;
-    width: 97px;
-    background: url(assets/images/logo.png)
+    height: 100px;
+    width: 120px;
+    background: url(assets/images/logo.jpg)
 }
 
 .app-login-box .app-logo {
