@@ -80,7 +80,7 @@
                             <div class="widget-content-left">
                                 <div class="btn-group">
                                     <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                        <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                        <img width="42" class="rounded-circle" src="{{ URL::asset('assets') }}/images/avatars/1.jpg" alt="">
                                         <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                     </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
@@ -426,7 +426,9 @@
 
                 <div class="mb-3 card">
                     <div class="card-header-tab card-header-tab-animation card-header">
-                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i class="header-icon lnr-gift icon-gradient bg-plum-plate"> </i>Merger Application Forms</div>
+                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+{{--                            <i class="header-icon lnr-gift icon-gradient bg-plum-plate"> </i>--}}
+                            Merger Application Forms</div>
                         <ul class="nav">
                             <li class="nav-item"><a data-toggle="tab" href="#tab-eg8-0" class="active nav-link">Merger Review Regulation Form</a></li>
                             <li class="nav-item"><a data-toggle="tab" href="#tab-eg8-1" class="nav-link">Negative Clearance Form</a></li>
@@ -438,16 +440,16 @@
                             <div class="tab-pane active" id="tab-eg8-0" role="tabpanel"><p>INFORMATION REQUIRED – Merger Review Regulations. This form provides a framework for supplying to the Federal Competition and Consumer Protection Commission, the information required under part XII of the Federal Competition and Consumer Protection Act.
                                     <br> This form should be completed jointly by parties to the proposed transaction. The requested information may be provided on the form or in appendices identified by the corresponding section number used in the form and should be bound together. </p>
                                 <div class="d-block text-center">
-                                    <a href="docs/Merger Review Regulation Form.docx" download="Merger Review Regulations" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
+                                    <a href="{{ URL::asset('assets') }}/docs/Merger Review Regulation Form.docx" download="Merger Review Regulations" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
                                 </div></div>
                             <div class="tab-pane" id="tab-eg8-1" role="tabpanel"><p>INFORMATION REQUIRED – Part III, Regulation 10 of the Merger Review Regulations. This form provides a framework for supplying to the Federal Competition and Consumer Protection Commission, the information required under part XII, Section 92 of the Federal Competition and Consumer Protection Act.
                                     This form may be completed jointly by parties to the proposed transaction. The requested information may be provided on the form or in appendices identified by the corresponding section number used in the form and should be bound together. </p>
                                 <div class="d-block text-center">
-                                    <a href="docs/NEGATIVE CLEARANCE FORM.docx" download="NEGATIVE CLEARANCE FORM" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
+                                    <a href="{{ URL::asset('assets') }}/docs/NEGATIVE CLEARANCE FORM.docx" download="NEGATIVE CLEARANCE FORM" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
                                 </div></div>
                             <div class="tab-pane" id="tab-eg8-2" role="tabpanel"><p>INFORMATION REQUIRED – Merger Review Regulations.<br> This form provides a framework for supplying to the Federal Competition and Consumer Protection Commission, the information required under part XII of the Federal Competition and Consumer Protection Act. This form should be completed jointly by parties to the proposed transaction. The requested information may be provided on the form or in appendices identified by the corresponding section number used in the form and should be bound together. </p>
                                 <div class="d-block text-center">
-                                    <a href="docs/SIMPLIFIED MERGER REVIEW REGULATION FORM.docx" download="SIMPLIFIED MERGER REVIEW REGULATION FORM" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
+                                    <a href="{{ URL::asset('assets') }}/docs/SIMPLIFIED MERGER REVIEW REGULATION FORM.docx" download="SIMPLIFIED MERGER REVIEW REGULATION FORM" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
                                 </div>
                             </div>
                         </div>
