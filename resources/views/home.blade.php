@@ -99,13 +99,24 @@
                                             <button type="button" tabindex="0" class="dropdown-item">User Account</button>
                                             <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
-                                            <button type="button" tabindex="0" class="dropdown-item" onclick="window.location.href='/login'">Sign Out</button>
+{{--                                            <button type="button" tabindex="0" class="dropdown-item" onclick="window.location.href='/login'">Sign Out</button>--}}
+{{--                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
                                     <div class="widget-heading">
-                                        Nduka Enweliku
+                                        {{ Auth::user()->name }}
                                     </div>
                                     <div class="widget-subheading">
                                         CerebralHub

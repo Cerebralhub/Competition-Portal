@@ -112,6 +112,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="float-right">
+                                        <button type="submit" class="btn btn-primary">
+                                            {{ __('Login') }}
+                                        </button>
+                                    </div>
                                     <div class="position-relative form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -119,6 +124,8 @@
                                             {{ __('Remember Me') }}
                                         </label>
                                     </div>
+
+
                                 </form>
                                 <div class="divider"></div>
                                 <h6 class="mb-0">No account? <a href="{{ route('register') }}" class="text-primary">Sign up now</a></h6>
@@ -131,9 +138,7 @@
                                         </a>
                                     @endif
                                 </div>
-                                <div class="float-right">
-                                    <button class="btn btn-primary btn-lg" onclick="window.location.href='/'">{{ __('Login') }}</button>
-                                </div>
+
                             </div>
                         </div>
                     </div>

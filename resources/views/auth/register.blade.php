@@ -101,7 +101,7 @@
                                 </h5>
                                 <div class="divider row"></div>
                                 <form method="POST" action="{{ route('register') }}">
-
+                                    @csrf
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -173,7 +173,12 @@
                                 </div>
                                 <div class="divider row"></div>
                                 <h6 class="mb-0">Already have an account?
-                                    <a href="{{ route('login') }}" class="text-primary">Sign in</a> | <a href="/password/reset" class="text-primary">Recover Password</a>
+                                    <a href="{{ route('login') }}" class="text-primary">Sign in</a> |
+                                    @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
                                 </h6>
                             </div>
 {{--                            <div class="modal-footer d-block text-center">--}}
