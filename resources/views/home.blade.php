@@ -25,168 +25,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
-            <div class="app-header__logo">
-                <div class="logo-src"></div>
-                <div class="header__pane ml-auto">
-                    <div>
-                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="app-header__mobile-menu">
-                <div>
-                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div class="app-header__menu">
-                <span>
-                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                        <span class="btn-icon-wrapper">
-                            <i class="fa fa-ellipsis-v fa-w-6"></i>
-                        </span>
-                    </button>
-                </span>
-            </div>    <div class="app-header__content">
-                <div class="app-header-left">
-                    <div class="search-wrapper">
-                        <div class="input-holder">
-                            <input type="text" class="search-input" placeholder="Type to search">
-                            <button class="search-icon"><span></span></button>
-                        </div>
-                        <button class="close"></button>
-                    </div>
-                    <ul class="header-menu nav">
-                        <li class="nav-item">
-                            <a href="javascript:void(0);" class="nav-link">
-                                <i class="nav-link-icon pe-7s-cloud"> </i>
-                                Upload
-                            </a>
-                        </li>
-                        <!-- <li class="btn-group nav-item">
-                            <a href="javascript:void(0);" class="nav-link">
-                                <i class="nav-link-icon fa fa-edit"></i>
-                                Projects
-                            </a>
-                        </li> -->
-                        <li class="dropdown nav-item">
-                            <a href="UserAccount.html" class="nav-link">
-                                <i class="nav-link-icon fa fa-cog"></i>
-                                Settings
-                            </a>
-                        </li>
-                    </ul>        </div>
-                <div class="app-header-right">
-                    <div class="header-btn-lg pr-0">
-                        <div class="widget-content p-0">
-                            <div class="widget-content-wrapper">
-                                <div class="widget-content-left">
-                                    <div class="btn-group">
-                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="{{ URL::asset('assets') }}/images/avatars/1.jpg" alt="">
-                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
-                                        </a>
-                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">User Account</button>
-                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                                            <div tabindex="-1" class="dropdown-divider"></div>
-{{--                                            <button type="button" tabindex="0" class="dropdown-item" onclick="window.location.href='/login'">Sign Out</button>--}}
-{{--                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
 
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                    @csrf
-                                                </form>
-{{--                                            </div>--}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget-content-left  ml-3 header-user-info">
-                                    <div class="widget-heading">
-                                        {{ Auth::user()->name }}
-                                    </div>
-                                    <div class="widget-subheading">
-                                        CerebralHub
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        </div>
-            </div>
-        </div>
-
-        <div class="app-main">
-            <div class="app-sidebar sidebar-shadow">
-                <div class="app-header__logo">
-                    <div class="logo-src"></div>
-                    <div class="header__pane ml-auto">
-                        <div>
-                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-                                        <span class="hamburger-inner"></span>
-                                    </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-header__mobile-menu">
-                    <div>
-                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="app-header__menu">
-                        <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                            </button>
-                        </span>
-                </div>    <div class="scrollbar-sidebar mt-2">
-                    <div class="app-sidebar__inner">
-                        <ul class="vertical-nav-menu">
-                            <li class="app-sidebar__heading">Dashboard</li>
-                            <li>
-                                <a href="index.html" class="mm-active">
-                                    <i class="metismenu-icon pe-7s-rocket"></i>
-                                    Dashboard Home
-                                </a>
-                            </li>
-                            <li class="app-sidebar__heading">Actions</li>
-                            <li>
-                                <a href="upload.html">
-                                    <i class="metismenu-icon pe-7s-cloud">
-                                    </i>Upload Forms
-                                </a>
-                            </li>
-                            <li class="app-sidebar__heading">Account Settings</li>
-                            <li>
-                                <a href="UserAccount.html">
-                                    <i class="metismenu-icon pe-7s-user">
-                                    </i>User Account
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="app-main__outer">
                 <div class="app-main__inner">
                     <div class="app-page-title mt-2">
@@ -442,26 +281,7 @@
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD:index.html
-                                </div> 
-                               </div>
-                        </div> 
-                        
-                        
-                        <div class="mb-3 card">
-                            <div class="card-header-tab card-header-tab-animation card-header">
-                                <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i class="header-icon lnr-gift icon-gradient bg-plum-plate"> </i>Merger Application Forms</div>
-                                <ul class="nav">
-                                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg8-0" class="active nav-link">Merger Review Regulation Form</a></li>
-                                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg8-1" class="nav-link">Negative Clearance Form</a></li>
-                                    <li class="nav-item"><a data-toggle="tab" href="#tab-eg8-2" class="nav-link">Simplified Merger Review Regulation Form</a></li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="tab-eg8-0" role="tabpanel"><p>INFORMATION REQUIRED – Merger Review Regulations. This form provides a framework for supplying to the Federal Competition and Consumer Protection Commission, the information required under part XII of the Federal Competition and Consumer Protection Act.
-                                    <br> This form should be completed jointly by parties to the proposed transaction. The requested information may be provided on the form or in appendices identified by the corresponding section number used in the form and should be bound together. </p>
-=======
+
                                 </div>
                             </div>    </div>
                     </div>
@@ -482,7 +302,6 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab-eg8-0" role="tabpanel"><p>INFORMATION REQUIRED – Merger Review Regulations. This form provides a framework for supplying to the Federal Competition and Consumer Protection Commission, the information required under part XII of the Federal Competition and Consumer Protection Act.
                                         <br> This form should be completed jointly by parties to the proposed transaction. The requested information may be provided on the form or in appendices identified by the corresponding section number used in the form and should be bound together. </p>
->>>>>>> 81fe3bacaeb0b44f9fc8e768d460d3aa7a866d28:resources/views/home.blade.php
                                     <div class="d-block text-center">
                                         <a href="{{ URL::asset('assets') }}/docs/Merger Review Regulation Form.docx" download="Merger Review Regulations" target="_blank" class="mb-2 mr-2 btn-transition btn btn-outline-success">Download Form</a>
                                     </div></div>
