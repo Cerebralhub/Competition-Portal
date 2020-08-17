@@ -265,9 +265,7 @@
                             </div>
                         </div>
                     </div>
-
-                    @endif
-
+            @endif
 
         <main>
             @yield('content')
