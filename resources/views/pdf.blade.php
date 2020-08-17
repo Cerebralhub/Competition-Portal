@@ -10,7 +10,7 @@
                             <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
                             <script type="text/javascript">
                                 document.addEventListener("adobe_dc_view_sdk.ready", function(){
-                                    var adobeDCView = new AdobeDC.View({clientId: "5cf739ae79094ff5ac15a71aecfbd2b0", divId: "adobe-dc-view"});
+                                    var adobeDCView = new AdobeDC.View({clientId: "c3c67a26df6540cc89694b4b4942d562", divId: "adobe-dc-view"});
                                     adobeDCView.previewFile({
                                             content:{ location:
                                                     { url: "https://fccpcmergers.ng/assets/docs/Merger%20Review%20Regulation%20Form.pdf"}},
