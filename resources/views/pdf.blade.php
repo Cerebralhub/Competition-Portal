@@ -16,7 +16,7 @@
                                     var adobeDCView = new AdobeDC.View({clientId: "c3c67a26df6540cc89694b4b4942d562", divId: "adobe-dc-view"});
                                     adobeDCView.previewFile({
                                             content:{ location:
-                                                    { url: pdfFile}},
+                                                    { url: "https://fccpc-pdfs.s3.us-east-2.amazonaws.com/Merger+Review+Regulation+Form.pdf"}},
                                             metaData:{fileName: "Merger Review Regulation Form.pdf"}
                                         },
                                         {
