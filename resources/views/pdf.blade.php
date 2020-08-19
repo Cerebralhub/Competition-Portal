@@ -26,8 +26,11 @@
                                             metaData:{fileName: "Merger Review Regulation Form.pdf"}
                                         },
                                         {
-                                            embedMode: "FULL_WINDOW",
-                                            "enableFormFilling": true
+                                            // embedMode: "FULL_WINDOW",
+                                            showLeftHandPanel: true,
+                                            showPageControls: false,
+                                            enableFormFilling: true,
+                                            showDownloadPDF: false
                                         });
                                 });
                             </script>
