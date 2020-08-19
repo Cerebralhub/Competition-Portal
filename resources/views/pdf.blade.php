@@ -28,7 +28,7 @@
                                         {
                                             // embedMode: "FULL_WINDOW",
                                             showLeftHandPanel: true,
-                                            showPageControls: false,
+                                            showPageControls: true,
                                             enableFormFilling: true,
                                             showDownloadPDF: false
                                         });
