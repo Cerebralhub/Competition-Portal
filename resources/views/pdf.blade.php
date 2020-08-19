@@ -16,7 +16,7 @@
                                     "showLeftHandPanel":true,
                                     "showPageControls":true,
                                     "enableFormFilling": true
-                                }
+                                };
 
                                 document.addEventListener("adobe_dc_view_sdk.ready", function(){
                                     var adobeDCView = new AdobeDC.View({clientId: "c3c67a26df6540cc89694b4b4942d562", divId: "adobe-dc-view"});
@@ -27,7 +27,8 @@
                                         },
                                         {
                                             embedMode: "FULL_WINDOW",
-                                        }, previewConfig);
+                                            "enableFormFilling": true
+                                        });
                                 });
                             </script>
 
