@@ -15,6 +15,7 @@
                                 const previewConfig={
                                     "showLeftHandPanel":true,
                                     "showPageControls":true,
+                                    "enableFormFilling": true
                                 }
 
                                 document.addEventListener("adobe_dc_view_sdk.ready", function(){
@@ -25,7 +26,7 @@
                                             metaData:{fileName: "Merger Review Regulation Form.pdf"}
                                         },
                                         {
-                                            embedMode: "FULL_WINDOW"
+                                            embedMode: "FULL_WINDOW",
                                         }, previewConfig);
                                 });
                             </script>
