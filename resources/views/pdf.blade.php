@@ -12,6 +12,11 @@
                             <script type="text/javascript">
                                 var pdfFile = @json(URL::asset('docs/Merger Review Regulation Form.pdf'));
 
+                                const previewConfig={
+                                    "showLeftHandPanel":true,
+                                    "showPageControls":true,
+                                }
+
                                 document.addEventListener("adobe_dc_view_sdk.ready", function(){
                                     var adobeDCView = new AdobeDC.View({clientId: "c3c67a26df6540cc89694b4b4942d562", divId: "adobe-dc-view"});
                                     adobeDCView.previewFile({
@@ -21,7 +26,7 @@
                                         },
                                         {
                                             embedMode: "SIZED_CONTAINER"
-                                        });
+                                        }, previewConfig);
                                 });
                             </script>
 
