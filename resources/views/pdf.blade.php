@@ -10,13 +10,13 @@
                             <div id="adobe-dc-view" style="height: 560px; width: 1000px; margin: auto;"></div>
                             <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
                             <script type="text/javascript">
-                                var pdfFile = @json(URL::asset('assets/docs/Merger Review Regulation Form.pdf'));
-                                // alert('Yooo' +  hello + ' lol');
+                                var pdfFile = @json(URL::asset('docs/Merger Review Regulation Form.pdf'));
+
                                 document.addEventListener("adobe_dc_view_sdk.ready", function(){
                                     var adobeDCView = new AdobeDC.View({clientId: "c3c67a26df6540cc89694b4b4942d562", divId: "adobe-dc-view"});
                                     adobeDCView.previewFile({
                                             content:{ location:
-                                                    { url: "https://fccpc-pdfs.s3.us-east-2.amazonaws.com/Merger+Review+Regulation+Form.pdf"}},
+                                                    { url: pdfFile}},
                                             metaData:{fileName: "Merger Review Regulation Form.pdf"}
                                         },
                                         {
@@ -34,7 +34,7 @@
                 </div>
                 </div>
         </div>
-        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+{{--        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>--}}
     </div>
 </div>
 
