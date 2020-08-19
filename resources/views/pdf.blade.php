@@ -30,6 +30,7 @@
                                             showLeftHandPanel: true,
                                             showPageControls: true,
                                             enableFormFilling: true,
+                                            showAnnotationTools: true,
                                             showDownloadPDF: false
                                         });
                                 });
